@@ -5,6 +5,7 @@
   --border: #dde1d8;
   --link: #2c5d8a;
   --link-hover: #1f4263;
+  --heading: #4a5868;
   --max-width: 980px;
 }
 
@@ -58,7 +59,7 @@ a:focus-visible {
 
 .site-title {
   color: var(--text);
-  font-size: 1.45rem;
+  font-size: 1.62rem;
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.01em;
@@ -72,7 +73,7 @@ a:focus-visible {
 
 .site-nav a {
   color: var(--muted);
-  font-size: 0.96rem;
+  font-size: 1.04rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -89,8 +90,8 @@ a:focus-visible {
 h1,
 h2,
 h3 {
-  color: var(--text);
-  font-weight: 700;
+  color: var(--heading);
+  font-weight: 600;
   line-height: 1.25;
   margin: 0 0 1rem;
   letter-spacing: -0.01em;
@@ -101,9 +102,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.45rem;
+  font-size: 1.18rem;
   margin-top: 0;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.9rem;
 }
 
 p,
@@ -120,12 +121,13 @@ ul {
 }
 
 .news-heading {
-  font-size: 1.9rem;
-  font-weight: 500;
+  color: var(--heading);
+  font-size: 1.18rem;
+  font-weight: 600;
   text-transform: lowercase;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-top: 1.8rem;
-  margin-bottom: 1.35rem;
+  margin-bottom: 0.9rem;
 }
 
 .news-list {
@@ -311,7 +313,7 @@ ul {
   }
 
   .site-title {
-    font-size: 1.3rem;
+    font-size: 1.42rem;
   }
 
   .home-grid {
