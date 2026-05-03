@@ -6,9 +6,9 @@ title: Home
   <h2>About</h2>
   <div class="about-body">
     <img
-      class="about-portrait"
       src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
-      alt="Portrait placeholder for the site owner">
+      alt="Portrait placeholder for the site owner"
+      style="width: 96px; max-width: 96px; height: 96px; object-fit: cover; border: 1px solid #d7dbe2; float: right; margin: 0.15rem 0 0.85rem 1.15rem;">
     <p>
       I am a PhD student working at the intersection of natural language processing, conversational
       recommender systems, and information retrieval. My research focuses on how interactive language
