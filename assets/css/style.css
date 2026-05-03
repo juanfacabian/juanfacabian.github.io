@@ -1,10 +1,10 @@
 :root {
-  --bg: #fcfcfa;
-  --text: #1f2430;
-  --muted: #5a6472;
-  --border: #d7dbe2;
-  --link: #1f4e79;
-  --link-hover: #173a5c;
+  --bg: #fafaf7;
+  --text: #20242c;
+  --muted: #6a7280;
+  --border: #dde1d8;
+  --link: #2c5d8a;
+  --link-hover: #1f4263;
   --max-width: 980px;
 }
 
@@ -20,8 +20,10 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -59,6 +61,7 @@ a:focus-visible {
   font-size: 1.45rem;
   font-weight: 600;
   line-height: 1.05;
+  letter-spacing: -0.01em;
 }
 
 .site-nav {
@@ -90,6 +93,7 @@ h3 {
   font-weight: 700;
   line-height: 1.25;
   margin: 0 0 1rem;
+  letter-spacing: -0.01em;
 }
 
 h1 {
@@ -105,6 +109,10 @@ h2 {
 p,
 ul {
   margin: 0 0 1.05rem;
+}
+
+p {
+  color: #2f3742;
 }
 
 ul {
