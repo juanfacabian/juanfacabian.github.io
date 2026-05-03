@@ -2,9 +2,13 @@
 title: Home
 ---
 
-<div class="profile-grid">
-  <section>
-    <h2>About</h2>
+<section class="about-section">
+  <h2>About</h2>
+  <div class="about-body">
+    <img
+      class="about-portrait"
+      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+      alt="Portrait placeholder for the site owner">
     <p>
       I am a PhD student working at the intersection of natural language processing, conversational
       recommender systems, and information retrieval. My research focuses on how interactive language
@@ -20,15 +24,8 @@ title: Home
       systems. I received my bachelor's degree from Nanjing Normal University and my master's degree from
       Renmin University of China.
     </p>
-  </section>
-
-  <aside class="profile-card">
-    <img
-      class="portrait"
-      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
-      alt="Portrait placeholder for the site owner">
-  </aside>
-</div>
+  </div>
+</section>
 
 <h2>News</h2>
 <ul>
