@@ -137,13 +137,14 @@ ul {
 }
 
 .home-portrait {
-  width: 100%;
-  max-width: 120px;
+  width: 112px;
+  height: 136px;
+  max-width: none;
   display: block;
   border: 1px solid var(--border);
   object-fit: cover;
   margin-bottom: 1rem;
-  border-radius: 50% / 42%;
+  border-radius: 50%;
 }
 
 .profile-role,
@@ -218,7 +219,8 @@ ul {
   }
 
   .home-portrait {
-    max-width: 110px;
-    border-radius: 50% / 42%;
+    width: 100px;
+    height: 122px;
+    border-radius: 50%;
   }
 }
