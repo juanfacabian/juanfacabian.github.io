@@ -130,7 +130,7 @@ ul {
 
 .home-portrait {
   width: 100%;
-  max-width: 200px;
+  max-width: 150px;
   display: block;
   border: 1px solid var(--border);
   object-fit: cover;
@@ -209,6 +209,6 @@ ul {
   }
 
   .home-portrait {
-    max-width: 180px;
+    max-width: 140px;
   }
 }

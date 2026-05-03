@@ -5,18 +5,16 @@ permalink: /publications/
 
 # Publications
 
-This page collects publications, preprints, and works in progress related to conversational recommender systems, information retrieval, and natural language processing.
+This page collects publications related to conversational recommender systems, information retrieval, and natural language processing.
 
 ## Selected Publications
 
-Publication details will be added here as the list is finalized.
+- **When and How to Ask: Dynamic Preference Elicitation Strategies for Conversational Recommender Systems.**
+  Accepted to *SIGIR 2026* as a full paper.
+- **Interplay: Training Independent Simulators for Reference-Free Conversational Recommendation.**
+  Accepted to the *ECIR 2026 Full Papers Track*.
 
 ## Works in Progress
 
 - Research on conversational recommender systems
 - Research on information retrieval
-
-## Academic Links
-
-- Supervisor: [Xi Wang](https://www.xiwangeric.com/)
-- Collaborator: [Shuo Zhang](https://imsure318.github.io/)
