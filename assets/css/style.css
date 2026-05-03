@@ -113,25 +113,38 @@ ul {
 
 .home-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 250px;
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: 3.2rem;
   align-items: start;
 }
 
 .home-main {
-  max-width: 640px;
+  max-width: 700px;
 }
 
 .home-sidebar {
-  padding-top: 0.3rem;
+  padding-top: 0.2rem;
 }
 
 .home-portrait {
   width: 100%;
-  max-width: 220px;
+  max-width: 200px;
   display: block;
   border: 1px solid var(--border);
   object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profile-name {
+  font-size: 1.35rem;
+  margin-bottom: 0.55rem;
+}
+
+.profile-role,
+.profile-meta {
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin-bottom: 0.45rem;
 }
 
 .post-list {

@@ -3,6 +3,16 @@ title: Home
 ---
 
 <div class="home-grid">
+  <aside class="home-sidebar">
+    <img
+      class="home-portrait"
+      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+      alt="Portrait placeholder for Feng Xia">
+    <h2 class="profile-name">Feng Xia</h2>
+    <p class="profile-role">PhD Student in Natural Language Processing</p>
+    <p class="profile-meta">University of Sheffield</p>
+  </aside>
+
   <section class="home-main">
     <h2>About</h2>
     <p>
@@ -26,11 +36,4 @@ title: Home
       <li><strong>Ongoing:</strong> Publication list and project details are being updated.</li>
     </ul>
   </section>
-
-  <aside class="home-sidebar">
-    <img
-      class="home-portrait"
-      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
-      alt="Portrait placeholder for Feng Xia">
-  </aside>
 </div>
