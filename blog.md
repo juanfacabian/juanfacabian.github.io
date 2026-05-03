@@ -11,6 +11,9 @@ permalink: /blog/
     <div class="blog-copy">
       <div class="pub-title"><a href="{{ '/blog/when-and-how-to-ask/' | relative_url }}">When and How to Ask: Dynamic Preference Elicitation Strategies for Conversational Recommender Systems</a></div>
     </div>
-    <div class="blog-year">Apr<br>2026</div>
+    <div class="blog-year">
+      <div class="blog-month">Apr</div>
+      <div class="blog-year-number">2026</div>
+    </div>
   </section>
 </div>

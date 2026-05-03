@@ -259,10 +259,23 @@ ul {
 
 .blog-year {
   color: #c4c9d1;
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.05;
+  text-align: right;
   flex: 0 0 auto;
+}
+
+.blog-month {
+  color: #b8bfc9;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.blog-year-number {
+  color: #c4c9d1;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .pub-list {
@@ -400,6 +413,10 @@ ul {
 
   .blog-year {
     margin-top: 0.85rem;
-    font-size: 1.35rem;
+    text-align: left;
+  }
+
+  .blog-year-number {
+    font-size: 1.6rem;
   }
 }
