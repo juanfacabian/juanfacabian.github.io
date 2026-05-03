@@ -137,14 +137,14 @@ ul {
   margin-bottom: 1rem;
 }
 
-.profile-name {
-  font-size: 1.35rem;
-  margin-bottom: 0.55rem;
-}
-
 .profile-role,
 .profile-meta {
   color: var(--muted);
+  font-size: 0.98rem;
+  margin-bottom: 0.45rem;
+}
+
+.profile-link {
   font-size: 0.98rem;
   margin-bottom: 0.45rem;
 }
