@@ -1,0 +1,14 @@
+title: "Juan Facabian"
+description: "A minimalist academic-style personal website built with Jekyll."
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:title/
+
+collections: {}
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
