@@ -16,4 +16,4 @@ Details will be added here.
 
 ## Teaching and Supervision
 
-- Teaching assistant, Natural Language Processing Marking - Semester 1, 2 (2025-2026), University of Sheffield
+- Teaching assistant, Natural Language Processing - Semester 1, 2 (2025-2026), University of Sheffield
