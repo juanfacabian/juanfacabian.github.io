@@ -10,19 +10,17 @@ title: Home
       alt="Portrait placeholder for the site owner"
       style="width: 96px; max-width: 96px; height: 96px; object-fit: cover; border: 1px solid #d7dbe2; float: right; margin: 0.15rem 0 0.85rem 1.15rem;">
     <p>
-      I am a PhD student working at the intersection of natural language processing, conversational
-      recommender systems, and information retrieval. My research focuses on how interactive language
-      technologies can support better recommendation and retrieval experiences in conversational settings.
+      I am a PhD student in the Natural Language Processing Research Group at the University of Sheffield.
+      I am supervised by Dr <a href="https://www.xiwangeric.com/">Xi Wang</a>, Lecturer (~Assistant Professor)
+      in Natural Language Processing at the University of Sheffield, and Dr
+      <a href="https://imsure318.github.io/">Shuo Zhang</a>, Senior Research Scientist at Bloomberg AI in London, UK.
     </p>
     <p>
-      I am supervised by <a href="https://www.xiwangeric.com/">Xi Wang</a>, Lecturer in Natural Language
-      Processing at The University of Sheffield, and I also work with
-      <a href="https://imsure318.github.io/">Shuo Zhang</a>, Research Scientist.
+      Before then, I received my bachelor's degree from Nanjing Normal University and my master's degree
+      from Renmin University of China.
     </p>
     <p>
-      More broadly, I am interested in conversational AI, information access, and user-centered intelligent
-      systems. I received my bachelor's degree from Nanjing Normal University and my master's degree from
-      Renmin University of China.
+      My research interests are conversational recommender systems and information retrieval.
     </p>
   </div>
 </section>
