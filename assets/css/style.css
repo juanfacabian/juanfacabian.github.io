@@ -149,6 +149,18 @@ ul {
   margin-bottom: 0.45rem;
 }
 
+.profile-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.profile-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+}
+
 .post-list {
   list-style: none;
   padding: 0;
