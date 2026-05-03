@@ -113,7 +113,7 @@ ul {
 .profile-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: minmax(0, 1.6fr) 240px;
+  grid-template-columns: minmax(0, 1.7fr) 190px;
   align-items: start;
 }
 
@@ -123,22 +123,12 @@ ul {
 
 .portrait {
   width: 100%;
-  max-width: 220px;
+  max-width: 170px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 1px solid var(--border);
   display: block;
   margin: 0 auto;
-}
-
-.meta-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-}
-
-.meta-list li + li {
-  margin-top: 0.45rem;
 }
 
 .post-list {

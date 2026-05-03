@@ -6,26 +6,18 @@ title: Home
   <section>
     <h2>About</h2>
     <p>
-      I am currently pursuing my PhD and working on research at the intersection of natural language processing,
-      conversational recommender systems, and information retrieval.
+      I am a PhD student working at the intersection of natural language processing, conversational
+      recommender systems, and information retrieval. My research focuses on how interactive language
+      technologies can support better recommendation and retrieval experiences in conversational settings.
     </p>
     <p>
-      I am supervised by <a href="https://www.xiwangeric.com/">Xi Wang</a>, a Lecturer in Natural Language
+      I am supervised by <a href="https://www.xiwangeric.com/">Xi Wang</a>, Lecturer in Natural Language
       Processing at The University of Sheffield, and I also work with
       <a href="https://imsure318.github.io/">Shuo Zhang</a>, Research Scientist.
     </p>
-
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Conversational recommender systems</li>
-      <li>Information retrieval</li>
-      <li>Natural language processing</li>
-      <li>User-centered intelligent systems</li>
-    </ul>
-
-    <h2>Education</h2>
     <p>
-      I received my bachelor's degree from Nanjing Normal University and my master's degree from
+      More broadly, I am interested in conversational AI, information access, and user-centered intelligent
+      systems. I received my bachelor's degree from Nanjing Normal University and my master's degree from
       Renmin University of China.
     </p>
   </section>
@@ -35,12 +27,6 @@ title: Home
       class="portrait"
       src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
       alt="Portrait placeholder for the site owner">
-    <ul class="meta-list">
-      <li><strong>Position:</strong> PhD Student</li>
-      <li><strong>Research:</strong> CRS and IR</li>
-      <li><strong>Supervisor:</strong> Xi Wang</li>
-      <li><strong>Collaborator:</strong> Shuo Zhang</li>
-    </ul>
   </aside>
 </div>
 
