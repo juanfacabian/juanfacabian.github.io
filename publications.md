@@ -10,7 +10,7 @@ permalink: /publications/
       <div class="pub-entry">
         <div class="pub-title">When and How to Ask: Dynamic Preference Elicitation Strategies for Conversational Recommender Systems</div>
         <div class="pub-authors"><span class="pub-self">Feng Xia</span>, Shuo Zhang, Xi Wang,</div>
-        <div class="pub-venue"><em>The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '26)</em>, 2026.</div>
+        <div class="pub-venue"><em>The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '26), Melbourne, Australia, July 20-24, 2026</em>.</div>
       </div>
     </div>
     <div class="pub-year">2026</div>
@@ -35,7 +35,7 @@ permalink: /publications/
       <div class="pub-entry">
         <div class="pub-title">Integrating GNNs and Knowledge Graph Patches in Recommendations in MOOCs</div>
         <div class="pub-authors">Zhifei Hu, Cristea Alexandra I., <span class="pub-self">Feng Xia</span></div>
-        <div class="pub-venue"><em>The 26th International Conference on Artificial Intelligence in Education (AIED 2025)</em>, 2025.</div>
+        <div class="pub-venue"><em>Artificial Intelligence in Education: 26th International Conference, AIED 2025, Palermo, Italy, July 22-26, 2025, Proceedings, Part II</em>.</div>
       </div>
     </div>
     <div class="pub-year">2025</div>
