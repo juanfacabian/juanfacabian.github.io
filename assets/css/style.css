@@ -228,6 +228,42 @@ ul {
   font-size: 0.95rem;
 }
 
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.blog-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.8rem 0;
+}
+
+.blog-copy {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.blog-meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 0.45rem;
+}
+
+.blog-thumb-link {
+  flex: 0 0 240px;
+  display: block;
+}
+
+.blog-thumb {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+}
+
 .pub-list {
   display: flex;
   flex-direction: column;
@@ -349,5 +385,15 @@ ul {
   .pub-year {
     margin-top: 0.85rem;
     font-size: 1.6rem;
+  }
+
+  .blog-item {
+    display: block;
+  }
+
+  .blog-thumb-link {
+    display: block;
+    margin-top: 1rem;
+    max-width: 220px;
   }
 }
