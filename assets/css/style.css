@@ -276,6 +276,33 @@ ul {
   line-height: 1;
 }
 
+.blog-post-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 1.35rem;
+}
+
+.paper-figure {
+  margin: 1.5rem 0 1.7rem;
+}
+
+.paper-figure img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.paper-figure--narrow {
+  max-width: 540px;
+}
+
+.paper-figure figcaption {
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  margin-top: 0.6rem;
+}
+
 .pub-list {
   display: flex;
   flex-direction: column;
@@ -416,5 +443,9 @@ ul {
 
   .blog-year-number {
     font-size: 1.6rem;
+  }
+
+  .paper-figure--narrow {
+    max-width: 100%;
   }
 }

@@ -4,205 +4,122 @@ permalink: /blog/when-and-how-to-ask/
 layout: default
 ---
 
-<p class="blog-meta">4.25, 2026 &nbsp;&nbsp; Feng Xia</p>
+<p class="blog-post-meta">Apr 25, 2026 | Feng Xia</p>
 
-Conversational recommender systems are becoming increasingly common in domains such as movies, music, travel, and e-commerce. Instead of only relying on historical clicks or ratings, these systems can talk to users, ask questions, clarify needs, and gradually refine recommendations through multi-turn conversations.
+This post is a research note for our SIGIR 2026 paper on conversational recommender systems (CRSs). The paper asks a very practical question: if a recommender can talk to users, when should it ask follow-up questions, and what kind of questions should it ask?
 
-But this raises a simple yet important question:
+My short answer is simple: **there is no single best elicitation strategy for the whole conversation**. Early in the dialogue, users usually need help exploring the space, so attribute-based questions work better. Later, once preferences become clearer, item-based questions become more effective. The paper turns that intuition into a dataset, a modeling framework, and an empirical study.
 
-**When should a recommender system ask the user for more preferences, and how should it ask?**
+<figure class="paper-figure">
+  <img src="{{ '/assets/images/papers/when-how-ask-stage.png' | relative_url }}" alt="User choices between attribute-based and item-based elicitation strategies across dialogue stages">
+  <figcaption>
+    A central finding from the paper: user preference for elicitation strategies changes with dialogue stage. Attribute-based prompts dominate early; item-based prompts become stronger later.
+  </figcaption>
+</figure>
 
-This question is the focus of our SIGIR 2026 paper:
+## About
 
-> **When and How to Ask: Dynamic Preference Elicitation Strategies for Conversational Recommender Systems**  
-> Feng Xia, Shuo Zhang, Xi Wang  
-> SIGIR 2026
+Conversational recommender systems differ from traditional recommenders because they can actively gather preferences during the interaction. That sounds powerful, but it introduces a policy question that many systems still handle in a fairly static way. Some systems mostly ask attribute questions, such as genre or actor preferences. Others rely more on item-level comparisons. In practice, both are useful, but not at the same time and not for the same reason.
 
-In this work, we study preference elicitation in conversational recommender systems from a stage-aware perspective. Our main finding is that there is no single best way to ask users about their preferences. Instead, the best elicitation strategy depends on where the conversation is and how clearly the user has already expressed their needs.
+This paper studies preference elicitation as a **stage-aware decision problem**. Instead of assuming one fixed strategy, we ask whether a CRS should switch strategy as the conversation moves from vague intent to refined choice.
 
-## Background: Preference Elicitation in CRS
+## The Core Question
 
-A conversational recommender system, or CRS, aims to recommend items through natural language interaction. Compared with traditional recommender systems, a CRS has one major advantage: it can actively collect user preferences during the conversation.
+The paper is organized around three research questions:
 
-For example, if a user says:
+1. Is a single preference elicitation strategy sufficient across dialogue stages?
+2. Do different elicitation strategies work better at different stages?
+3. Does explicitly modeling strategy selection improve conversational recommendation?
 
-> I want to watch a movie tonight.
+The overall answer is yes to the second and third questions, and effectively no to the first.
 
-The system may respond in different ways:
+## What We Found in the User Study
 
-> What kind of movies do you usually enjoy?
+We first ran a preliminary user study with **328 participants**. Participants read conversational recommendation scenarios and selected their preferred system responses. Because each response represented a different elicitation strategy, this gives us direct evidence about what kinds of questions users prefer in different settings.
 
-or:
+Two findings mattered most.
 
-> Would you prefer something like *Jojo Rabbit* or *What We Do in the Shadows*?
+First, a static strategy is not enough. For attribute-based elicitation, only **21%** of participants considered it sufficient across all situations; **53%** said it worked in most situations, and **25%** said it only worked in a few cases. Item-based elicitation showed the same pattern: **25%** judged it sufficient across all situations, **59%** said it worked in most situations, and **16%** said it only worked in a few cases.
 
-These two responses represent different preference elicitation strategies.
+Second, strategy preference changes with the stage of the conversation. In the early stage, when users are still exploring what they want, attribute-based questions are preferred. As the dialogue progresses and preferences become more concrete, item-based elicitation steadily becomes more attractive and eventually overtakes attribute-based questioning.
 
-The first is **attribute-based elicitation**. It asks about item attributes, such as genre, actor, director, mood, price range, or location.
+That shift is the conceptual heart of the paper: **good elicitation moves from abstract preference exploration to concrete preference refinement**.
 
-The second is **item-based elicitation**. It asks users to compare or choose among concrete items.
+## A Concrete Example
 
-Most existing conversational recommender systems tend to rely on a relatively fixed strategy. They may keep asking attribute questions, or they may repeatedly present items for comparison. However, real conversations are dynamic. A user may begin with vague needs and gradually form more concrete preferences. This suggests that the system should also change how it asks questions over time.
+The paper also gives a nice intuition for why stage matters. Suppose a user starts with:
 
-## Core Question
+> I'm looking for a movie tonight.
 
-The paper investigates three research questions:
+At that point, asking "What kind of movies do you usually enjoy?" is more helpful than asking the user to choose among specific titles. But once the user says they want a light comedy and shows interest in something like *What We Do in the Shadows*, the system has enough context to ask a more concrete question, such as comparing a small set of candidate items.
 
-1. **Is a single preference elicitation strategy sufficient across different dialogue stages?**
+<figure class="paper-figure paper-figure--narrow">
+  <img src="{{ '/assets/images/papers/when-how-ask-flow.png' | relative_url }}" alt="Annotation workflow for determining whether preference elicitation is needed and which strategy to use">
+  <figcaption>
+    Part of the annotation workflow behind InPE: first decide whether a turn needs elicitation, then choose a strategy, generate strategy-specific candidates, and keep the update only if it improves on the original response.
+  </figcaption>
+</figure>
 
-2. **Do different elicitation strategies work better at different stages of a conversation?**
+That transition is exactly what the paper tries to model, and InPE gives us the annotation structure to do it in a systematic way.
 
-3. **Can explicitly modeling elicitation strategies improve conversational recommendation performance?**
+## InPE: A Dataset for Strategy-Aware CRS
 
-Our answer is: yes, strategy matters; and more importantly, strategy should change dynamically.
+To study this properly, we built **InPE** (InSPIRED Preference Elicitation), an annotated and augmented version of the INSPIRED dataset. INSPIRED already contains 999 multi-turn movie recommendation dialogues, but it does not provide strategy-level labels. We enrich it with annotations for:
 
-## A Preliminary User Study
+- whether a turn needs preference elicitation at all;
+- which elicitation strategy is preferred;
+- whether a strategy-aware rewrite is better than the original system response.
 
-We first conducted a user study with **328 participants**. Participants were shown conversational recommendation scenarios and asked to choose which system response they preferred.
+The final dataset used in experiments contains **6,719 turn-level samples**. Annotators label elicitation turns as **attribute-based**, **item-based**, or **hybrid**. The distribution is interesting on its own: **hybrid** strategies account for about **47.03%** of elicitation cases, followed by **item-based** at **28.85%** and **attribute-based** at **24.12%**. That tells us effective elicitation is often not purely one thing or the other.
 
-The results show that a static strategy is not enough.
+The human preference comparisons are also strong. When evaluators compared strategy-aware rewrites against original responses, they preferred the strategy-aware versions in **89.34% to 95.5%** of cases depending on the strategy category.
 
-For attribute-based elicitation, only **21%** of participants thought it was sufficient across all situations. For item-based elicitation, only **25%** thought it was sufficient across all situations. Most users preferred different strategies in different contexts.
+## COPE: Modeling When and How to Ask
 
-More interestingly, we observed a clear stage-dependent pattern.
+On top of InPE, the paper proposes **COPE**, which stands for **COnversational Preference Elicitation via Mixture of Experts**.
 
-In the early stage of a conversation, users usually have vague needs. At this point, attribute-based questions are more useful because they help narrow down the search space:
+The key idea is to treat conversational recommendation as a structured decision problem rather than a generic text-generation task. COPE uses a shared frozen LLM backbone together with task-specialized experts and a **two-stage router**:
 
-> What kind of movies do you like?
+1. a task-level router decides whether the system should elicit preferences, recommend items, or continue general interaction;
+2. if elicitation is needed, a strategy-level router chooses among attribute-based, item-based, and hybrid elicitation.
 
-> Do you prefer something light-hearted or serious?
+This matters because "should I ask now?" and "what kind of question should I ask?" are different decisions. COPE models them explicitly instead of hoping a single monolithic generator will implicitly discover both.
 
-Later in the conversation, once the user has already provided some preferences, item-based elicitation becomes more effective:
+## Main Results
 
-> Between these two movies, which one sounds closer to what you want?
+The offline and pairwise results are quite encouraging.
 
-> Would you prefer this option or something similar to that one?
+On recommendation quality, COPE achieves the best recall across all reported cutoffs on InPE, including:
 
-This reveals a natural transition:
+- **Recall@1 = 0.144**
+- **Recall@10 = 0.314**
+- **Recall@50 = 0.442**
 
-**from abstract preferences to concrete choices.**
+The paper notes that the strongest baseline, ReFICR, still falls short, especially at deeper cutoffs. That is important because it suggests the gain is not just from using an LLM, but from explicitly modeling proactive strategy selection.
 
-## The InPE Dataset
+On pairwise response evaluation, COPE reaches a **win rate of 0.604**, again outperforming the baselines. This tells us the benefit is not only in retrieval metrics; users also prefer the resulting responses.
 
-To support this line of research, we introduce **InPE**, short for **InSPIRED Preference Elicitation**.
+One especially useful analysis in the paper is the routing intervention result. If the system is forced to use the correct expert and strategy labels, **Recall@10 rises to 0.342**. In other words, the experts themselves are strong, and one of the remaining bottlenecks is routing accuracy. That gives a clear direction for future work.
 
-InPE is built on top of the existing INSPIRED conversational recommendation dataset. The original dataset contains multi-turn recommendation dialogues, but it does not provide fine-grained annotations for preference elicitation strategies. We enrich it with new labels that indicate:
+## Why I Think This Paper Matters
 
-- whether a dialogue turn requires preference elicitation;
-- which strategy should be used;
-- whether a strategy-aware response improves the original system response.
+What I like most about this work is that it makes a subtle but important point concrete: conversational recommendation is not just about ranking items better. It is also about **interacting better**.
 
-The annotation process combines LLM-based filtering with human verification. We first use an LLM to identify candidate turns that may require preference elicitation. Human annotators then verify these turns and label the preferred strategy.
+If a system asks attribute questions for too long, it can feel repetitive and slow. If it jumps to concrete item comparisons too early, users may not yet have enough context to answer well. A good CRS needs to manage that transition.
 
-In total, the dataset contains **6,719 turn-level samples**. Among them:
+This paper contributes three things that make that possible:
 
-- **46.3%** are general interaction turns;
-- **19.8%** are preference elicitation turns;
-- **33.9%** are recommendation turns.
+- evidence that strategy choice is stage-dependent;
+- a benchmark dataset for learning these choices;
+- a modeling framework that treats elicitation as explicit decision making.
 
-For preference elicitation turns, the annotated strategies include:
+For me, the most memorable takeaway is not just "attribute early, item later." It is the broader idea that **elicitation policy should evolve with the conversation**, and that we can model that evolution directly.
 
-- **attribute-based**;
-- **item-based**;
-- **hybrid**, which combines both item and attribute information.
+## Closing Note
 
-One important observation is that hybrid strategies are very common. In the annotated data, hybrid strategies account for around **47%** of elicitation cases, followed by item-based and attribute-based strategies. This suggests that effective elicitation often requires combining different types of preference cues rather than relying on only one.
+If you are interested in proactive conversational systems, I think this is a useful lens: recommendation quality and interaction strategy should be studied together, not separately.
 
-## Example: How Strategy Changes During a Conversation
-
-Consider a movie recommendation conversation.
-
-At the beginning, the user may simply say:
-
-> I want to watch a movie.
-
-The system does not know much yet, so an attribute-based question is appropriate:
-
-> What kinds of movies do you usually enjoy?
-
-Suppose the user then says:
-
-> I like something light-hearted, maybe similar to *What We Do in the Shadows*.
-
-At this point, the system has more concrete signals. It can move to an item-based strategy:
-
-> Between *What We Do in the Shadows* and *Jojo Rabbit*, which one would you prefer?
-
-After the user gives more feedback, the system may be ready to make a recommendation:
-
-> I recommend *Hunt for the Wilderpeople*.
-
-This example illustrates the central idea of our work: preference elicitation should not be treated as a fixed behavior. A good CRS should decide when to ask, what to ask, and when to recommend.
-
-## COPE: Conversational Preference Elicitation via Mixture of Experts
-
-Based on these observations, we propose **COPE**, a new architecture for conversational recommendation.
-
-COPE stands for:
-
-**COnversational Preference Elicitation via Mixture of Experts**
-
-The key idea is to explicitly model different conversational behaviors with different experts. Instead of using one model to handle all turns in the same way, COPE contains specialized modules for different actions, such as:
-
-- general conversation;
-- preference elicitation;
-- recommendation.
-
-For preference elicitation, the model further decides which strategy to use:
-
-- attribute-based elicitation;
-- item-based elicitation;
-- hybrid elicitation.
-
-COPE uses a hierarchical router. At each dialogue turn, the router first predicts the high-level action: should the system elicit preferences, recommend an item, or simply continue the conversation? If preference elicitation is needed, the router then predicts the most suitable elicitation strategy.
-
-This allows the system to dynamically switch strategies as the conversation evolves.
-
-## Experimental Results
-
-We evaluate COPE on the InPE dataset and compare it with several conversational recommendation baselines, including knowledge-graph-based methods and LLM-based methods.
-
-The results show that COPE achieves the best recommendation performance.
-
-For example, on Recall@10, COPE achieves **0.314**, outperforming the strongest baseline ReFICR, which achieves **0.274**. On Recall@50, COPE reaches **0.442**, compared with **0.396** from ReFICR.
-
-We also evaluate response quality using human-annotated preference pairs. COPE achieves the highest pairwise win rate, **0.604**, outperforming LLaMA, Qwen, and ReFICR.
-
-These results suggest that explicitly modeling preference elicitation strategies is useful not only for asking better questions, but also for improving recommendation quality.
-
-## What We Learned
-
-The paper provides three main takeaways.
-
-First, preference elicitation is dynamic. A single static strategy cannot cover all conversational stages.
-
-Second, different strategies are useful at different stages. Attribute-based questions are more effective early in the conversation, while item-based strategies become more helpful once the user’s preferences become clearer.
-
-Third, strategy-aware modeling improves CRS performance. By explicitly learning when and how to ask, COPE can better support proactive conversational recommendation.
-
-## Why This Matters
-
-A good conversational recommender should not only know what to recommend. It should also know how to interact with users.
-
-Asking too many questions can make the conversation inefficient. Asking the wrong type of question can confuse the user or fail to collect useful information. Recommending too early may lead to poor results, while recommending too late may frustrate the user.
-
-This work shows that preference elicitation should be treated as a strategic decision-making problem. A CRS needs to decide:
-
-**Should I ask now?**  
-**What kind of question should I ask?**  
-**Should I ask about attributes, items, or both?**  
-**Is the conversation ready for recommendation?**
-
-By modeling these decisions explicitly, we can build conversational recommender systems that are more adaptive, proactive, and user-centered.
-
-## Conclusion
-
-In this work, we study when and how conversational recommender systems should ask users for preferences. Through a user study, dataset annotation, and model design, we show that preference elicitation strategies are stage-dependent and context-sensitive.
-
-We introduce **InPE**, a dataset with fine-grained annotations for preference elicitation, and propose **COPE**, a Mixture-of-Experts framework that dynamically selects conversational actions and elicitation strategies.
-
-Our results suggest that the future of conversational recommendation lies not only in better item ranking, but also in better interaction strategy.
-
-The dataset is available at:
+The InPE dataset is available here:
 
 [https://github.com/juanfacabian/InPE](https://github.com/juanfacabian/InPE)
+
