@@ -7,7 +7,8 @@ permalink: /activities/
 
 ## Professional Services
 
-Details will be added here.
+- Reviewer of NLPCC 2025
+- Reviewer of ACL ARR 2025
 
 ## Talks
 
@@ -15,4 +16,4 @@ Details will be added here.
 
 ## Teaching and Supervision
 
-Details will be added here.
+- Teaching assistant, Natural Language Processing Marking - Semester 1, 2 (2025-2026), University of Sheffield
