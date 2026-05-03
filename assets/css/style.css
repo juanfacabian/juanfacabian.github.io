@@ -236,7 +236,6 @@ ul {
 
 .blog-item {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   gap: 1.5rem;
   padding: 1.8rem 0;
@@ -247,14 +246,8 @@ ul {
   min-width: 0;
 }
 
-.blog-meta {
-  color: var(--muted);
-  font-size: 0.92rem;
-  margin-top: 0.45rem;
-}
-
 .blog-thumb-link {
-  flex: 0 0 240px;
+  flex: 0 0 170px;
   display: block;
 }
 
@@ -262,6 +255,14 @@ ul {
   width: 100%;
   display: block;
   border: 1px solid var(--border);
+}
+
+.blog-year {
+  color: #c4c9d1;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.05;
+  flex: 0 0 auto;
 }
 
 .pub-list {
@@ -393,7 +394,12 @@ ul {
 
   .blog-thumb-link {
     display: block;
-    margin-top: 1rem;
-    max-width: 220px;
+    margin-bottom: 1rem;
+    max-width: 170px;
+  }
+
+  .blog-year {
+    margin-top: 0.85rem;
+    font-size: 1.35rem;
   }
 }
