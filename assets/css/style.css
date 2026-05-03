@@ -280,6 +280,11 @@ ul {
   color: #566273;
 }
 
+.pub-link {
+  margin-top: 0.35rem;
+  font-size: 0.98rem;
+}
+
 .pub-self {
   color: #c218c7;
 }
