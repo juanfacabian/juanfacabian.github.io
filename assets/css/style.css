@@ -143,6 +143,7 @@ ul {
   border: 1px solid var(--border);
   object-fit: cover;
   margin-bottom: 1rem;
+  border-radius: 50% / 42%;
 }
 
 .profile-role,
@@ -218,5 +219,6 @@ ul {
 
   .home-portrait {
     max-width: 110px;
+    border-radius: 50% / 42%;
   }
 }
