@@ -34,8 +34,8 @@ permalink: /publications/
       <div class="pub-bullet">&deg;</div>
       <div class="pub-entry">
         <div class="pub-title">Integrating GNNs and Knowledge Graph Patches in Recommendations in MOOCs</div>
-        <div class="pub-authors">Zhifei Hu, Cristea Alexandra I., <span class="pub-self">Feng Xia</span></div>
-        <div class="pub-venue"><em>Artificial Intelligence in Education: 26th International Conference, AIED 2025, Palermo, Italy, July 22-26, 2025, Proceedings, Part II</em>.</div>
+        <div class="pub-authors">Zhifei Hu, Alexandra I. Cristea, <span class="pub-self">Feng Xia</span></div>
+        <div class="pub-venue"><em>Artificial Intelligence in Education: 26th International Conference, AIED 2025, Palermo, Italy, July 22-26, 2025, Proceedings, Part III</em>.</div>
       </div>
     </div>
     <div class="pub-year">2025</div>
