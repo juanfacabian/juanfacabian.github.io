@@ -3,16 +3,10 @@ title: Activities
 permalink: /activities/
 ---
 
-# Activities
-
 ## Professional Services
 
 - Reviewer of NLPCC 2025
 - Reviewer of ACL ARR 2025
-
-## Talks
-
-Details will be added here.
 
 ## Teaching and Supervision
 
