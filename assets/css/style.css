@@ -112,17 +112,19 @@ ul {
 }
 
 .home-grid {
-  display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
+  display: flex;
+  align-items: flex-start;
   gap: 3.2rem;
-  align-items: start;
 }
 
 .home-main {
+  flex: 1 1 auto;
   max-width: 700px;
 }
 
 .home-sidebar {
+  flex: 0 0 220px;
+  width: 220px;
   padding-top: 0.2rem;
 }
 
@@ -185,11 +187,12 @@ ul {
   }
 
   .home-grid {
-    grid-template-columns: 1fr;
-    gap: 1.4rem;
+    display: block;
   }
 
   .home-sidebar {
+    width: auto;
+    margin-bottom: 1.5rem;
     padding-top: 0;
   }
 
