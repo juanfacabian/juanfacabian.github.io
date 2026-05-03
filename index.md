@@ -4,39 +4,45 @@ title: Home
 
 # Juan Facabian
 
-I am a researcher and builder interested in clear ideas, careful writing, and small digital spaces that are pleasant to return to. This site collects academic work, ongoing notes, and short essays.
+I am a PhD student working on conversational recommender systems and information retrieval. This site is a simple academic homepage for sharing research interests, publications, and updates.
 
 <div class="profile-grid">
   <section>
     <p class="intro">
-      My work sits at the intersection of computation, communication, and reflective practice.
-      I care about research that stays rigorous without becoming unreadable.
+      My research focuses on how interactive language technologies can support better recommendation and retrieval experiences, especially in conversational settings.
     </p>
 
     <h2>About</h2>
     <p>
-      I write about technology, learning, and the craft of thinking in public. I am especially drawn
-      to questions that benefit from both analytical precision and accessible language.
+      I am currently pursuing my PhD and working on research at the intersection of natural language processing,
+      conversational recommender systems, and information retrieval.
     </p>
     <p>
-      This homepage is intentionally quiet: a lightweight place for readers to find core information
-      quickly, browse recent writing, and understand the shape of my work at a glance.
+      I am supervised by <a href="https://www.xiwangeric.com/">Xi Wang</a>, a Lecturer in Natural Language
+      Processing at The University of Sheffield, and I also work with
+      <a href="https://imsure318.github.io/">Shuo Zhang</a>, Research Scientist.
     </p>
 
     <h2>Research Interests</h2>
     <ul>
-      <li>Human-centered computing</li>
-      <li>Digital writing and knowledge organization</li>
-      <li>Responsible uses of artificial intelligence</li>
-      <li>Minimal interfaces for scholarly communication</li>
+      <li>Conversational recommender systems</li>
+      <li>Information retrieval</li>
+      <li>Natural language processing</li>
+      <li>User-centered intelligent systems</li>
     </ul>
 
-    <h2>Selected Focus</h2>
+    <h2>Education</h2>
     <p>
-      I am currently developing a body of writing on how simple publishing systems can support deeper,
-      more durable intellectual work. Jekyll is particularly useful here because it keeps the site
-      transparent, portable, and easy to maintain.
+      I received my bachelor's degree from Nanjing Normal University and my master's degree from
+      Renmin University of China.
     </p>
+
+    <h2>News</h2>
+    <ul>
+      <li><strong>May 2026:</strong> Launched this academic website to share research updates and publications.</li>
+      <li><strong>Spring 2026:</strong> Continuing research on conversational recommendation and retrieval.</li>
+      <li><strong>Ongoing:</strong> Publication list and project details are being updated.</li>
+    </ul>
   </section>
 
   <aside class="profile-card">
@@ -45,10 +51,10 @@ I am a researcher and builder interested in clear ideas, careful writing, and sm
       src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
       alt="Portrait placeholder for the site owner">
     <ul class="meta-list">
-      <li><strong>Role:</strong> Researcher and writer</li>
-      <li><strong>Location:</strong> London</li>
-      <li><strong>Email:</strong> hello@example.com</li>
-      <li><strong>Current page:</strong> Minimal academic homepage</li>
+      <li><strong>Position:</strong> PhD Student</li>
+      <li><strong>Research:</strong> CRS and IR</li>
+      <li><strong>Supervisor:</strong> Xi Wang</li>
+      <li><strong>Collaborator:</strong> Shuo Zhang</li>
     </ul>
   </aside>
 </div>

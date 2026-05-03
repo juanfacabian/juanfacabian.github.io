@@ -5,6 +5,7 @@ This repository contains a minimalist academic-style personal website built with
 ## Pages
 
 - `Home`
+- `Publications`
 - `Blog`
 
 ## Notes on sources and inspiration
