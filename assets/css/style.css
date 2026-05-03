@@ -130,7 +130,7 @@ ul {
 
 .home-portrait {
   width: 100%;
-  max-width: 150px;
+  max-width: 120px;
   display: block;
   border: 1px solid var(--border);
   object-fit: cover;
@@ -145,7 +145,7 @@ ul {
 }
 
 .profile-link {
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   margin-bottom: 0.45rem;
 }
 
@@ -156,8 +156,8 @@ ul {
 }
 
 .profile-icon {
-  width: 1rem;
-  height: 1rem;
+  width: 0.875rem;
+  height: 0.875rem;
   flex: 0 0 auto;
 }
 
@@ -209,6 +209,6 @@ ul {
   }
 
   .home-portrait {
-    max-width: 140px;
+    max-width: 110px;
   }
 }
