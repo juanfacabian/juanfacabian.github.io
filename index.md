@@ -2,16 +2,8 @@
 title: Home
 ---
 
-# Juan Facabian
-
-I am a PhD student working on conversational recommender systems and information retrieval. This site is a simple academic homepage for sharing research interests, publications, and updates.
-
 <div class="profile-grid">
   <section>
-    <p class="intro">
-      My research focuses on how interactive language technologies can support better recommendation and retrieval experiences, especially in conversational settings.
-    </p>
-
     <h2>About</h2>
     <p>
       I am currently pursuing my PhD and working on research at the intersection of natural language processing,
@@ -36,13 +28,6 @@ I am a PhD student working on conversational recommender systems and information
       I received my bachelor's degree from Nanjing Normal University and my master's degree from
       Renmin University of China.
     </p>
-
-    <h2>News</h2>
-    <ul>
-      <li><strong>May 2026:</strong> Launched this academic website to share research updates and publications.</li>
-      <li><strong>Spring 2026:</strong> Continuing research on conversational recommendation and retrieval.</li>
-      <li><strong>Ongoing:</strong> Publication list and project details are being updated.</li>
-    </ul>
   </section>
 
   <aside class="profile-card">
@@ -58,3 +43,10 @@ I am a PhD student working on conversational recommender systems and information
     </ul>
   </aside>
 </div>
+
+<h2>News</h2>
+<ul>
+  <li><strong>May 2026:</strong> Launched this academic website to share research updates and publications.</li>
+  <li><strong>Spring 2026:</strong> Continuing research on conversational recommendation and retrieval.</li>
+  <li><strong>Ongoing:</strong> Publication list and project details are being updated.</li>
+</ul>

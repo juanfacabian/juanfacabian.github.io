@@ -42,29 +42,28 @@ a:focus-visible {
 }
 
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  align-items: flex-start;
+  display: block;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
 }
 
-.site-title {
-  color: var(--text);
-  font-size: 1.9rem;
-  font-weight: 700;
+.header-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
-.site-tagline {
-  margin: 0.35rem 0 0;
-  color: var(--muted);
+.site-title {
+  color: var(--text);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .site-nav {
   display: flex;
-  gap: 1rem;
-  padding-top: 0.35rem;
+  gap: 1.75rem;
   flex-wrap: wrap;
 }
 
@@ -111,28 +110,25 @@ ul {
   padding-left: 1.25rem;
 }
 
-.intro {
-  font-size: 1.08rem;
-}
-
 .profile-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: minmax(0, 1.6fr) minmax(220px, 0.9fr);
+  grid-template-columns: minmax(0, 1.6fr) 240px;
   align-items: start;
-  margin-top: 2rem;
 }
 
 .profile-card {
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
+  padding-top: 0.25rem;
 }
 
 .portrait {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
 }
 
 .meta-list {
@@ -178,13 +174,11 @@ ul {
     padding: 2rem 1rem 3rem;
   }
 
-  .site-header,
   .profile-grid {
     grid-template-columns: 1fr;
-    display: grid;
   }
 
-  .site-nav {
-    padding-top: 0;
+  .site-title {
+    font-size: 2.1rem;
   }
 }

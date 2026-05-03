@@ -10,15 +10,14 @@
   <body>
     <div class="page-shell">
       <header class="site-header">
-        <div>
+        <div class="header-main">
           <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-          <p class="site-tagline">Research, writing, and notes.</p>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="{{ '/' | relative_url }}" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+            <a href="{{ '/publications/' | relative_url }}" {% if page.url == "/publications/" %}aria-current="page"{% endif %}>Publications</a>
+            <a href="{{ '/blog/' | relative_url }}" {% if page.url == "/blog/" %}aria-current="page"{% endif %}>Blog</a>
+          </nav>
         </div>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="{{ '/' | relative_url }}" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
-          <a href="{{ '/publications/' | relative_url }}" {% if page.url == "/publications/" %}aria-current="page"{% endif %}>Publications</a>
-          <a href="{{ '/blog/' | relative_url }}" {% if page.url == "/blog/" %}aria-current="page"{% endif %}>Blog</a>
-        </nav>
       </header>
 
       <main class="content">
