@@ -3,18 +3,28 @@ title: Publications
 permalink: /publications/
 ---
 
-# Publications
+<div class="pub-list">
+  <section class="pub-item">
+    <div class="pub-main">
+      <div class="pub-bullet">&deg;</div>
+      <div class="pub-entry">
+        <div class="pub-title">When and How to Ask: Dynamic Preference Elicitation Strategies for Conversational Recommender Systems</div>
+        <div class="pub-authors"><span class="pub-self">Feng Xia</span>, Shuo Zhang, Xi Wang,</div>
+        <div class="pub-venue"><em>The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '26)</em>, 2026.</div>
+      </div>
+    </div>
+    <div class="pub-year">2026</div>
+  </section>
 
-This page collects publications related to conversational recommender systems, information retrieval, and natural language processing.
-
-## Selected Publications
-
-- **When and How to Ask: Dynamic Preference Elicitation Strategies for Conversational Recommender Systems.**
-  Accepted to *SIGIR 2026* (full paper, first author).
-- **Interplay: Training Independent Simulators for Reference-Free Conversational Recommendation.**
-  Accepted to *ECIR 2026* (full paper, second author).
-
-## Works in Progress
-
-- Research on conversational recommender systems
-- Research on information retrieval
+  <section class="pub-item">
+    <div class="pub-main">
+      <div class="pub-bullet">&deg;</div>
+      <div class="pub-entry">
+        <div class="pub-title">Interplay: Training Independent Simulators for Reference-Free Conversational Recommendation</div>
+        <div class="pub-authors">Jerome Ramos, <span class="pub-self">Feng Xia</span>, Xi Wang, Shubham Chatterjee, Xiao Fu, Hossein A. Rahmani, Aldo Lipani</div>
+        <div class="pub-venue"><em>Advances in Information Retrieval: 48th European Conference on Information Retrieval (ECIR 2026), Delft, The Netherlands, March 29-April 2, 2026</em>.</div>
+      </div>
+    </div>
+    <div class="pub-year">2026</div>
+  </section>
+</div>
