@@ -238,7 +238,7 @@ ul {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  padding: 1.8rem 0;
+  padding: 1.45rem 0;
 }
 
 .blog-copy {
@@ -247,7 +247,7 @@ ul {
 }
 
 .blog-thumb-link {
-  flex: 0 0 170px;
+  flex: 0 0 118px;
   display: block;
 }
 
@@ -257,23 +257,21 @@ ul {
   border: 1px solid var(--border);
 }
 
+.blog-inline-meta {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: 0.4rem;
+}
+
 .blog-year {
   color: #c4c9d1;
   text-align: right;
   flex: 0 0 auto;
 }
 
-.blog-month {
-  color: #b8bfc9;
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1.1;
-  margin-bottom: 0.2rem;
-}
-
 .blog-year-number {
   color: #c4c9d1;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 500;
   line-height: 1;
 }
@@ -408,7 +406,7 @@ ul {
   .blog-thumb-link {
     display: block;
     margin-bottom: 1rem;
-    max-width: 170px;
+    max-width: 140px;
   }
 
   .blog-year {
