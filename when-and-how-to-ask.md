@@ -2,6 +2,7 @@
 title: "When and How to Ask: Dynamic Preference Elicitation Strategies for Conversational Recommender Systems"
 permalink: /blog/when-and-how-to-ask/
 layout: default
+published: false
 ---
 
 <p class="blog-post-meta">Apr 25, 2026 | Feng Xia</p>
