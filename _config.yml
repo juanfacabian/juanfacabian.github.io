@@ -7,6 +7,10 @@ permalink: /blog/:title/
 
 collections: {}
 
+exclude:
+  - blog.md
+  - when-and-how-to-ask.md
+
 defaults:
   - scope:
       path: ""

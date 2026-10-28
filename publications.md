@@ -40,4 +40,16 @@ permalink: /publications/
     </div>
     <div class="pub-year">2025</div>
   </section>
+
+  <section class="pub-item">
+    <div class="pub-main">
+      <div class="pub-bullet">&deg;</div>
+      <div class="pub-entry">
+        <div class="pub-title"><a href="https://doi.org/10.1016/j.websem.2024.100831">Multi-stream graph attention network for recommendation with knowledge graph</a></div>
+        <div class="pub-authors">Zhifei Hu, <span class="pub-self">Feng Xia</span></div>
+        <div class="pub-venue"><em>Journal of Web Semantics, 82, 100831</em>, 2024.</div>
+      </div>
+    </div>
+    <div class="pub-year">2024</div>
+  </section>
 </div>
