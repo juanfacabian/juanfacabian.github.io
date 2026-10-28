@@ -156,6 +156,24 @@ ul {
   line-height: 1.6;
 }
 
+.patent-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.patent-list li {
+  padding-left: 0.15rem;
+  margin: 0 0 0.8rem;
+  line-height: 1.55;
+}
+
+.patent-status {
+  display: block;
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin-top: 0.15rem;
+}
+
 .home-grid {
   display: flex;
   align-items: flex-start;
