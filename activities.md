@@ -7,6 +7,8 @@ permalink: /activities/
 
 - Reviewer of NLPCC 2025
 - Reviewer of ACL ARR 2025
+- Reviewer of The Web Conference (WWW) 2027
+- Reviewer for ACM Transactions on Information Systems (TOIS)
 
 ## Teaching and Supervision
 
