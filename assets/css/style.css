@@ -180,6 +180,7 @@ ul {
   display: block;
   border: 1px solid var(--border);
   object-fit: cover;
+  object-position: 68% center;
   margin-bottom: 1rem;
   border-radius: 50%;
 }
